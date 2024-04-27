@@ -8,7 +8,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 
 def get_youtube_video_id(youtube_video_url):
-  return youtube_video_url.split('=')[1]
+  video_url = youtube_video_url.split('v=')[1]
+  return video_url.split('&')[0]
   
 
 def get_transcript_from_youtube(youtube_video_url):

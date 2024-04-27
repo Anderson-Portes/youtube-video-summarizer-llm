@@ -1,0 +1,6 @@
+services:
+  app:
+    build: .
+    ports:
+      - 7689:8501
+    restart: unless-stopped
